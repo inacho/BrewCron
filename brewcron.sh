@@ -33,6 +33,8 @@ if [[ $1 == "install" ]]; then
     plist="$agents/es.inacho.brewcron.plist"
     script="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/$( basename "${BASH_SOURCE[0]}" )"
 
+    mkdir -p "$agents"
+
     # DELETE PREVIOUS VERSION
 
     if [[ -f "$plist" ]]; then
